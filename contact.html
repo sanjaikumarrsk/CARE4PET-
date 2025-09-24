@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | care4pet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(-45deg, #ffecd2, #fcb69f, #ffdde1, #fc6076);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #333;
+    }
+    header {
+      background: #13547a;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd59;
+    }
+    .contact {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 50px auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: fadeIn 1.5s ease-in;
+    }
+    .contact h2 {
+      font-size: 32px;
+      color: #13547a;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .info {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      margin: 10px;
+      flex: 1;
+      min-width: 250px;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      color: #13547a;
+      margin-bottom: 10px;
+    }
+    .form {
+      margin-top: 30px;
+      text-align: center;
+    }
+    .form input, .form textarea {
+      width: 80%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .form button {
+      padding: 12px 25px;
+      background: #13547a;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .form button:hover {
+      background: #ffdd59;
+      color: black;
+    }
+    footer {
+      background: #13547a;
+      color: white;
+      text-align: center;
+      padding: 12px;
+      margin-top: 30px;
+    }
+    footer span {
+      color: #ffdd59;
+      font-weight: bold;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐾 care4pet</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">home</a>
+      <a href="{{ url_for('about') }}">about</a>
+      <a href="{{ url_for('contact') }}">contact</a>
+      <a href="{{ url_for('login') }}">login</a>
+      <a href="{{ url_for('signup') }}">register</a>
+      </nav>
+  </header>
+  <section class="contact">
+    <h2>📞 Contact Us</h2>
+    <div class="info">
+      <div class="card">
+        <h3>📱 Phone</h3>
+        <p>‪‪+91 9655920225‬‬</p>
+      </div>
+      <div class="card">
+        <h3>📧 Email</h3>
+        <p>care4pet@gmail.com</p>
+      </div>
+    </div>
+    <div class="form">
+      <h3>Send us a Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required><br>
+        <input type="email" placeholder="Your Email" required><br>
+        <textarea rows="5" placeholder="Your Message" required></textarea><br>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    © 2025 care4pet | made with ❤ for pets | <span>RSK ZONE 🌐</span>
+  </footer>
+</body>
+</html>

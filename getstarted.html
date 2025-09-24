@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started | care4pet</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .container {
+      background: rgba(255,255,255,0.9);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+      max-width: 400px;
+      width: 90%;
+    }
+    h1 {
+      color: #13547a;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #444;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+    .login-btn {
+      background: #13547a;
+      color: white;
+    }
+    .login-btn:hover {
+      background: #0f3d5a;
+      transform: scale(1.05);
+    }
+    .signup-btn {
+      background: #ff6b6b;
+      color: white;
+    }
+    .signup-btn:hover {
+      background: #e63946;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to care4pet 🐾</h1>
+    <p>To continue, please choose an option below:</p>
+    <a href="{{ url_for('login') }}" class="btn login-btn">Login</a>
+    <a href="{{ url_for('signup') }}" class="btn signup-btn">Sign Up</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | care4pet</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(-45deg, #ffecd2, #fcb69f, #ffdde1, #fc6076);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      color: #333;
+      animation: fadeIn 1.5s ease-in;
+    }
+    header {
+      background: #13547a;
+      color: white;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: slideDown 1s ease;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 24px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #ffdd59;
+      text-shadow: 0 0 8px #ffdd59;
+    }
+    .about {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 60px auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      animation: fadeUp 1.5s ease;
+    }
+    .about h2 {
+      font-size: 36px;
+      color: #13547a;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: pulse 2s infinite alternate;
+    }
+    .about p {
+      font-size: 18px;
+      line-height: 1.8;
+      text-align: justify;
+      color: #444;
+    }
+    .modules {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .module {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 1.5s ease-in;
+    }
+    .module:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .module h3 {
+      color: #13547a;
+      margin-bottom: 10px;
+    }
+    .module p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #666;
+    }
+    footer {
+      background: #13547a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+      animation: slideUp 1s ease;
+    }
+    footer span {
+      color: #ffdd59;
+      font-weight: bold;
+      animation: glow 1.5s infinite alternate;
+    }
+    /* Animations */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes pulse {
+      from { text-shadow: 0 0 5px #13547a; }
+      to { text-shadow: 0 0 20px #ffdd59; }
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ffdd59; }
+      to { text-shadow: 0 0 15px #fff176; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🐾 care4pet</h1>
+    <nav>
+      <a href="{{ url_for('home') }}">home</a>
+      <a href="{{ url_for('about') }}">about</a>
+      <a href="{{ url_for('contact') }}">contact</a>
+      <a href="{{ url_for('login') }}">login</a>
+      <a href="{{ url_for('signup') }}">register</a>
+    </nav>
+  </header>
+  <section class="about">
+    <h2>about care4pet</h2>
+    <p>
+      care4pet is a dedicated platform built with love for pets and pet owners.
+      our mission is to provide trusted guidance on feeding, grooming, training,
+      and overall well-being of your furry friends. whether you’re a first-time pet parent
+      or an experienced caretaker, care4pet gives you simple, reliable, and effective tips.
+      <br><br>
+      we believe every pet deserves a happy, healthy life. that’s why our team of pet lovers
+      constantly works to bring you updated care information, fun activities, and bonding tips.
+      <br><br>
+      join us in making the world a better place for pets — one paw at a time! 🐾
+    </p>
+    <div class="modules">
+      <div class="module">
+        <h3>🐕 pet care tips</h3>
+        <p>
+          expert advice on grooming, hygiene, training, and overall well-being.
+          learn how to make your pets feel happy, healthy, and safe every day.
+        </p>
+      </div>
+      <div class="module">
+        <h3>🍲 pet food guide</h3>
+        <p>
+          nutrition is key to a healthy life. explore our recommendations on the best
+          food, treats, and diet plans for dogs, cats, and other pets.
+        </p>
+      </div>
+      <div class="module">
+        <h3>⚕ health & wellness</h3>
+        <p>
+          stay updated with preventive care, vaccinations, exercise routines,
+          and common health checks for your furry companions.
+        </p>
+      </div>
+      <div class="module">
+        <h3>❤ bonding & activities</h3>
+        <p>
+          fun activities, playtime ideas, and bonding exercises that strengthen
+          your relationship with your pet while keeping them active.
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    © 2025 care4pet | made with ❤ for pets | <span>RSK ZONE 🌐</span>
+  </footer>
+</body>
+</html>
